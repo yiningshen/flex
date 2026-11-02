@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{PRODUCT}} — setup</title>
+<link rel="stylesheet" href="flex.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .effort { display: grid; grid-template-columns: auto 1fr; gap: calc(var(--u) * 1.6) calc(var(--u) * 3); text-align: left; align-items: center; width: 78%; }
+  .effort .k { display: flex; gap: .5em; align-items: center; color: var(--muted); font: 700 var(--fs-small)/1.2 var(--font); text-transform: uppercase; letter-spacing: .08em; }
+  .effort .v { font: 600 var(--fs-body)/1.2 var(--font); }
+  .note { display: flex; gap: .6em; align-items: flex-start; text-align: left; background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--accent); border-radius: var(--r); padding: calc(var(--u) * 2) calc(var(--u) * 2.6); max-width: 80%; }
+  .check { display: flex; gap: .6em; align-items: center; color: var(--accent); }
+</style>
+<!-- recordings: add timeline.js <script> tags here (record-cli.mjs for terminal steps, record.mjs for browser steps) -->
+</head>
+<body>
+<!-- Setup: effort card → finish line first → steps (action, scary-moment note, checkpoint) → finish → if stuck/upkeep → end. 60–120s. See directions/setup.md -->
+<main id="flex" data-direction="setup" data-fps="30" data-bpm="84" data-mood="chill" data-hit="86">
+
+  <!-- 1 · What you'll need (every row from assets/effort.json + truth.md) -->
+  <section class="scene" data-start="0" data-end="11" data-transition="cut">
+    <h1 class="t-title say fx-zoom" style="--dur:2;--zoom-from:1.05;--zoom-to:1" data-claim="framing">What you'll need</h1>
+    <div class="effort card fx-stagger" style="--step:.35">
+      <span class="k fx-fade" style="--at:.8"><i class="ic" data-ic="laptop"></i>Device</span><span class="v say wide fx-rise" style="--at:.8" data-claim="{{CLAIM}}">{{DEVICE}}</span>
+      <span class="k fx-fade" style="--at:1.6"><i class="ic" data-ic="person"></i>Accounts</span><span class="v say wide fx-rise" style="--at:1.6" data-claim="{{CLAIM}}">{{ACCOUNTS}}</span>
+      <span class="k fx-fade" style="--at:2.4"><i class="ic" data-ic="money"></i>Cost</span><span class="v say wide fx-rise" style="--at:2.4" data-claim="{{CLAIM}}">{{COST}}</span>
+      <span class="k fx-fade" style="--at:3.2"><i class="ic" data-ic="clock"></i>Time</span><span class="v say wide fx-rise" style="--at:3.2" data-claim="{{CLAIM}}">{{TIME}}</span>
+      <span class="k fx-fade" style="--at:4"><i class="ic" data-ic="wrench"></i>Upkeep</span><span class="v say wide fx-rise" style="--at:4" data-claim="{{CLAIM}}">{{UPKEEP}}</span>
+    </div>
+  </section>
+
+  <!-- 2 · Finish line first -->
+  <section class="scene" data-start="11" data-end="16.5" data-transition="fade" data-xfade=".6">
+    <p class="t-big say fx-rise" style="--at:.2" data-claim="framing">When you're done, you'll see this:</p>
+    <div class="fx-demo fx-blur" data-rec="{{REC_SUCCESS}}" data-chrome="browser" data-cursor="off" style="--at:.6;width:60%"></div>
+  </section>
+
+  <!-- 3 · Step (repeat per step; ~15s each) -->
+  <section class="scene" data-start="16.5" data-end="24" data-transition="slide" data-xfade=".5">
+    <p class="kicker fx-fade" style="--at:.1" data-claim="framing">Step 1</p>
+    <h2 class="t-big say fx-rise" style="--at:.2" data-claim="{{CLAIM}}">{{STEP_1_TITLE}}</h2>
+    <div class="note fx-rise" style="--at:1.4"><i class="ic" data-ic="shield"></i><span class="t-body say wide" data-claim="{{CLAIM}}">{{SCARY_MOMENT_NOTE}}</span></div>
+  </section>
+  <section class="scene" data-start="24" data-end="32" data-transition="fade" data-xfade=".4">
+    <div class="fx-terminal fx-tilt" data-rec="{{REC_STEP_1}}" data-show-waits style="--at:.1;width:74%"></div>
+    <p class="check t-body say fx-rise" style="--at:5.2" data-claim="{{CLAIM}}"><i class="ic" data-ic="check-circle"></i>You should now see {{CHECKPOINT_1}}</p>
+  </section>
+
+  <!-- … more steps … -->
+
+  <!-- Finish line -->
+  <section class="scene" data-start="72" data-end="80" data-transition="fade" data-xfade=".6">
+    <div class="fx-demo" data-rec="{{REC_SUCCESS}}" data-chrome="browser" data-cursor="off" style="--at:0;width:60%"></div>
+    <h2 class="t-title say fx-rise" style="--at:.8" data-claim="framing">That's it. It's running.</h2>
+  </section>
+
+  <!-- If something goes wrong / upkeep -->
+  <section class="scene" data-start="80" data-end="86" data-transition="fade">
+    <p class="kicker fx-fade" style="--at:.1" data-claim="framing">If it doesn't work</p>
+    <h2 class="t-big say wide fx-rise" style="--at:.3" data-claim="{{CLAIM}}">{{MOST_LIKELY_PROBLEM_AND_FIX}}</h2>
+    <p class="t-body muted say wide fx-rise" style="--at:2.6" data-claim="{{CLAIM}}">{{UPKEEP_LINE}}</p>
+  </section>
+
+  <!-- End card -->
+  <section class="scene" data-start="86" data-end="91" data-transition="fade" data-xfade=".6">
+    <img class="logo fx-pop" src="{{LOGO}}" alt="" style="--at:.05">
+    <h2 class="t-title say fx-rise" style="--at:.2" data-claim="framing">{{PRODUCT}}</h2>
+    <p class="t-body say fx-rise" style="--at:.5" data-claim="{{CLAIM}}">Written steps: {{DOCS_URL}}</p>
+  </section>
+
+</main>
+<script src="flex.js"></script>
+</body>
+</html>

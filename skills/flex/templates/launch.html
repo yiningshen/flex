@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{PRODUCT}} — launch</title>
+<link rel="stylesheet" href="flex.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="brand.css">
+<!-- recordings: add the <script src="assets/rec/<name>/timeline.js"></script> tags printed by record.mjs / record-cli.mjs here -->
+</head>
+<body>
+<!-- Launch: hook → what it is → it working → one true proof → end card. 15–25s. See directions/launch.md -->
+<main id="flex" data-direction="launch" data-fps="30" data-bpm="120" data-mood="upbeat" data-hit="17">
+
+  <!-- 1 · Hook (≤2s, ≤5 words) -->
+  <section class="scene" data-start="0" data-end="2" data-transition="cut">
+    <h1 class="t-hero say fx-zoom" style="--dur:2;--zoom-from:1.08;--zoom-to:1" data-claim="{{CLAIM}}" data-sfx="whoosh">{{HOOK}}</h1>
+  </section>
+
+  <!-- 2 · What it is -->
+  <section class="scene" data-start="2" data-end="5" data-transition="slide" data-xfade=".35">
+    <img class="logo fx-pop" src="{{LOGO}}" alt="" style="--at:.1">
+    <h2 class="t-title say fx-rise" style="--at:.25" data-claim="{{CLAIM}}">{{ONE_LINE_DEFINITION}}</h2>
+  </section>
+
+  <!-- 3 · It working: 2–3 recorded shots, one label each -->
+  <section class="scene" data-start="5" data-end="9.5" data-transition="slide" data-xfade=".35">
+    <p class="t-big say fx-rise" style="--at:.1" data-claim="{{CLAIM}}">{{SHOT_1_LABEL}}</p>
+    <div class="fx-demo fx-tilt" data-rec="{{REC_1}}" data-chrome="browser" style="--at:.2;width:72%"></div>
+  </section>
+  <section class="scene" data-start="9.5" data-end="14" data-transition="slide" data-xfade=".35">
+    <p class="t-big say fx-rise" style="--at:.1" data-claim="{{CLAIM}}">{{SHOT_2_LABEL}}</p>
+    <div class="fx-terminal fx-tilt" data-rec="{{REC_2}}" style="--at:.2;width:66%"></div>
+  </section>
+
+  <!-- 4 · One true proof point (from truth.md) -->
+  <section class="scene" data-start="14" data-end="17" data-transition="zoom" data-xfade=".35">
+    <p class="kicker fx-fade" style="--at:.1" data-claim="framing">{{PROOF_KICKER}}</p>
+    <h2 class="t-hero say fx-pop" style="--at:.2" data-claim="{{CLAIM}}">{{PROOF}}</h2>
+  </section>
+
+  <!-- 5 · End card (music hit lands at data-hit) -->
+  <section class="scene" data-start="17" data-end="21" data-transition="fade" data-xfade=".4">
+    <img class="logo fx-pop" src="{{LOGO}}" alt="" style="--at:.05">
+    <h2 class="t-title say fx-rise" style="--at:.15" data-claim="framing">{{PRODUCT}}</h2>
+    <p class="chip mono t-body fx-rise" style="--at:.35" data-claim="{{CLAIM}}">{{HOW_TO_GET_IT}}</p>
+  </section>
+
+</main>
+<script src="flex.js"></script>
+</body>
+</html>

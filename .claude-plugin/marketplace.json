@@ -1,0 +1,5 @@
+{
+  "name": "flex",
+  "owner": { "name": "Yining Shen" },
+  "plugins": [{ "name": "flex", "source": "./", "description": "Turn your product into promo videos people actually understand." }]
+}

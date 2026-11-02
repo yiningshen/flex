@@ -1,0 +1,9 @@
+{
+  "name": "flex",
+  "version": "0.1.0",
+  "description": "Turn your product into promo videos people actually understand: Launch, Explain, Use cases and Setup, from real product footage.",
+  "author": { "name": "Yining Shen" },
+  "license": "MIT",
+  "keywords": ["video", "launch", "demo", "explainer", "marketing", "onboarding"],
+  "skills": "./skills/"
+}

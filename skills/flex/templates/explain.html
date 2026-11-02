@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{PRODUCT}} — explained</title>
+<link rel="stylesheet" href="flex.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="brand.css">
+<!-- recordings: add timeline.js <script> tags here -->
+</head>
+<body>
+<!-- Explain: everyday problem → one analogy → 3 steps → result → where to get it. 45–75s, no code, no terminals. See directions/explain.md -->
+<main id="flex" data-direction="explain" data-fps="30" data-bpm="84" data-mood="chill" data-hit="52">
+
+  <!-- 1 · Everyday problem (2 screens) -->
+  <section class="scene" data-start="0" data-end="4.5" data-transition="cut">
+    <i class="ic ic-xl fx-pop" data-ic="{{ICON}}" style="--at:.6"></i>
+    <h1 class="t-title say fx-zoom" style="--dur:4.5;--zoom-from:1.04;--zoom-to:1" data-claim="framing">{{PROBLEM_LINE_1}}</h1>
+  </section>
+  <section class="scene" data-start="4.5" data-end="8.5" data-transition="fade">
+    <h2 class="t-title say fx-rise" style="--at:.3" data-claim="framing">{{PROBLEM_LINE_2}}</h2>
+  </section>
+
+  <!-- 2 · The idea in one analogy -->
+  <section class="scene" data-start="8.5" data-end="16" data-transition="rise" data-xfade=".7">
+    <img class="logo fx-pop" src="{{LOGO}}" alt="" style="--at:.2">
+    <h2 class="t-title say fx-rise" style="--at:.6" data-claim="{{CLAIM}}">{{PRODUCT}} is like {{ANALOGY}}.</h2>
+    <p class="t-body muted say wide fx-rise" style="--at:2" data-claim="{{CLAIM}}">{{SUPPORTING_LINE}}</p>
+  </section>
+
+  <!-- 3 · How it works: three steps from the user's side, each with a real screen -->
+  <section class="scene split" data-start="16" data-end="24" data-transition="slide" data-xfade=".6">
+    <div class="col">
+      <span class="step-num fx-pop" style="--at:.2">1</span>
+      <h3 class="t-big say fx-rise" style="--at:.4" data-claim="{{CLAIM}}">{{STEP_1}}</h3>
+    </div>
+    <div class="fx-demo fx-tilt" data-rec="{{REC_1}}" data-chrome="browser" style="--at:.5"></div>
+  </section>
+  <section class="scene split" data-start="24" data-end="32" data-transition="slide" data-xfade=".6">
+    <div class="col">
+      <span class="step-num fx-pop" style="--at:.2">2</span>
+      <h3 class="t-big say fx-rise" style="--at:.4" data-claim="{{CLAIM}}">{{STEP_2}}</h3>
+    </div>
+    <div class="fx-demo fx-tilt" data-rec="{{REC_2}}" data-chrome="browser" style="--at:.5"></div>
+  </section>
+  <section class="scene split" data-start="32" data-end="40" data-transition="slide" data-xfade=".6">
+    <div class="col">
+      <span class="step-num fx-pop" style="--at:.2">3</span>
+      <h3 class="t-big say fx-rise" style="--at:.4" data-claim="{{CLAIM}}">{{STEP_3}}</h3>
+    </div>
+    <div class="fx-demo fx-tilt" data-rec="{{REC_3}}" data-chrome="browser" style="--at:.5"></div>
+  </section>
+
+  <!-- 4 · What you end up with -->
+  <section class="scene" data-start="40" data-end="52" data-transition="fade" data-xfade=".7">
+    <div class="fx-demo fx-blur" data-rec="{{REC_RESULT}}" data-chrome="browser" data-cursor="off" style="--at:.2;width:64%"></div>
+    <h2 class="t-big say fx-rise" style="--at:1.2" data-claim="{{CLAIM}}">{{RESULT_LINE}}</h2>
+  </section>
+
+  <!-- 5 · Where to get it, and honestly what it costs -->
+  <section class="scene" data-start="52" data-end="60" data-transition="fade" data-xfade=".7">
+    <img class="logo fx-pop" src="{{LOGO}}" alt="" style="--at:.1">
+    <h2 class="t-title say fx-rise" style="--at:.3" data-claim="framing">{{PRODUCT}}</h2>
+    <p class="t-body say fx-rise" style="--at:.8" data-claim="{{CLAIM}}">{{COST_AND_WHERE}}</p>
+  </section>
+
+</main>
+<script src="flex.js"></script>
+</body>
+</html>

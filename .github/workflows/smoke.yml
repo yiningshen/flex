@@ -1,0 +1,12 @@
+name: smoke
+on: [push, pull_request]
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node skills/flex/scripts/doctor.mjs --fix
+      - run: npx --prefix skills/flex playwright install-deps chromium
+      - run: tests/smoke.sh

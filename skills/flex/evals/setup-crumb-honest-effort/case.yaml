@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: setup-crumb-honest-effort
+expected_outcome: |
+  A Setup video (60-120s MP4 + poster) that opens with a sourced 'what you'll need' effort card (device, accounts, cost, time measured from the real install, upkeep), shows the install steps recorded from a real run with checkpoints and an explained terminal, shows the success screen, and has a truth ledger; any simulated clone step is disclosed rather than presented as real.
+context:
+  scaffold_script: place-files.sh

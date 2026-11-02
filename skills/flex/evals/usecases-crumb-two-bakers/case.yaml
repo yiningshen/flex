@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: usecases-crumb-two-bakers
+expected_outcome: |
+  A Use cases video (30-60s MP4 + poster) with 2-3 persona stories framed as 'imagine', each showing real recorded Crumb footage (cursor, clicks, zoom) of a task Crumb actually supports with persona-fitting demo data, a truth ledger sourcing every capability, and no invented stats or testimonials.
+context:
+  scaffold_script: place-files.sh

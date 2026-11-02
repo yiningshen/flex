@@ -1,0 +1,9 @@
+/* paper — warm, calm, editorial */
+:root {
+  --bg: #f6f2ea; --ink: #23201b; --muted: #6f675b; --accent: #c2512f; --accent-ink: #fff;
+  --card: #fffdf8; --line: rgba(35,32,27,.12); --r: 16px;
+  --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --shadow: 0 24px 60px rgba(60,40,20,.14);
+  --ease: cubic-bezier(.25,.8,.25,1);
+}
+.t-hero, .t-title, .t-big { font-weight: 600; letter-spacing: -.02em; }

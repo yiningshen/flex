@@ -1,0 +1,8 @@
+{
+  "name": "crumb",
+  "version": "0.3.0",
+  "description": "Local-first order board for small bakeries",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": { "start": "node server.js" }
+}

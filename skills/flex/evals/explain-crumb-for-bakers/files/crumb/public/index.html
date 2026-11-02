@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crumb — order board for small bakeries</title>
+<meta name="description" content="Keep track of cake and bread orders without a notebook.">
+<link rel="icon" href="logo.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a href="/" class="brand"><img src="logo.svg" alt="Crumb logo" class="logo"><span>Crumb</span></a>
+  <nav>
+    <button id="today" class="ghost" aria-pressed="false">Today</button>
+    <button id="bakelist" class="ghost">Bake list</button>
+    <button id="new" class="primary">New order</button>
+  </nav>
+</header>
+<main>
+  <section id="empty" hidden>
+    <h1>No orders yet</h1>
+    <p>Add your first order, or try Crumb with sample orders.</p>
+    <button id="demo" class="primary">Load demo orders</button>
+  </section>
+  <section id="board">
+    <div class="col" data-status="bake"><h2>To bake <span class="n"></span></h2><ul></ul></div>
+    <div class="col" data-status="ready"><h2>Ready <span class="n"></span></h2><ul></ul></div>
+    <div class="col" data-status="done"><h2>Picked up <span class="n"></span></h2><ul></ul></div>
+  </section>
+</main>
+<dialog id="form">
+  <form method="dialog" id="orderForm">
+    <h2>New order</h2>
+    <label>Customer <input id="customer" required autocomplete="off"></label>
+    <label>Item <input id="item" required autocomplete="off" placeholder="e.g. Sourdough loaf"></label>
+    <div class="two">
+      <label>How many <input id="qty" type="number" min="1" value="1"></label>
+      <label>Pickup <select id="day"><option value="0">Today</option><option value="1">Tomorrow</option><option value="2">In 2 days</option></select></label>
+    </div>
+    <label>Time <input id="time" type="time" value="09:00"></label>
+    <menu><button value="cancel" class="ghost" formnovalidate>Cancel</button><button id="save" value="save" class="primary">Save order</button></menu>
+  </form>
+</dialog>
+<dialog id="list"><h2>Bake list</h2><p class="sub">Everything still to bake</p><ul id="totals"></ul><form method="dialog"><button class="primary">Done</button></form></dialog>
+<div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>

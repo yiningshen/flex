@@ -1,0 +1,12 @@
+/* sketch — playful, hand-made */
+:root {
+  --bg: #fbf7ee; --ink: #22201c; --muted: #5f5a50; --accent: #e8590c; --accent-ink: #fff;
+  --card: #fffef9; --line: #22201c; --r: 10px;
+  --font-display: "Marker Felt", "Chalkboard SE", "Comic Neue", "Segoe Print", var(--font);
+  --shadow: 6px 6px 0 #22201c;
+  --ease: cubic-bezier(.34,1.56,.64,1);
+}
+.card, .fx-window, .fx-terminal { border: 3px solid var(--line); border-radius: 14px 18px 12px 20px / 18px 12px 20px 14px; }
+.t-hero, .t-title { font-weight: 700; letter-spacing: -.01em; }
+.wobble { animation: fx-wobble 3s ease-in-out infinite; animation-play-state: paused; }
+@keyframes fx-wobble { 0%,100% { transform: rotate(-1.2deg); } 50% { transform: rotate(1.2deg); } }

@@ -1,0 +1,10 @@
+/* studio — huge type, few words, product floating */
+:root {
+  --bg: #ffffff; --ink: #111111; --muted: #6e6e73; --accent: #111111; --accent-ink: #fff;
+  --card: #f5f5f7; --line: rgba(0,0,0,.08); --r: 24px;
+  --fs-hero: calc(var(--u) * 12); --fs-title: calc(var(--u) * 8);
+  --shadow: 0 50px 120px rgba(0,0,0,.18);
+  --ease: cubic-bezier(.4,0,.1,1);
+}
+.scene.dark { --scene-bg: #000; color: #f5f5f7; }
+.t-hero, .t-title { font-weight: 700; letter-spacing: -.05em; }

@@ -1,0 +1,11 @@
+/* bright — friendly, colourful, consumer */
+:root {
+  --bg: #fff8ef; --ink: #1d1b2a; --muted: #5d5a6b; --accent: #ff5a36; --accent-ink: #fff;
+  --card: #ffffff; --line: rgba(29,27,42,.10); --r: 28px;
+  --font-display: ui-rounded, "SF Pro Rounded", "Nunito", var(--font);
+  --shadow: 0 24px 0 rgba(29,27,42,.08), 0 30px 60px rgba(29,27,42,.12);
+  --ease: cubic-bezier(.34,1.4,.64,1);
+}
+.scene.field { --scene-bg: var(--accent); color: var(--accent-ink); }
+.scene.field .muted { color: rgba(255,255,255,.85); }
+.t-hero, .t-title { font-weight: 800; letter-spacing: -.03em; }

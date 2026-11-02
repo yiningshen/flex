@@ -1,0 +1,11 @@
+{
+  "jargon": ["api", "apis", "sdk", "cli", "repo", "repository", "commit", "branch", "pull request", "merge", "deploy", "deployed", "deployment",
+    "hosting", "self-hosted", "server", "servers", "serverless", "backend", "back-end", "frontend", "front-end", "database", "schema", "cache", "caching",
+    "endpoint", "webhook", "webhooks", "json", "yaml", "config", "configuration", ".env", "env var", "environment variable", "dependency", "dependencies",
+    "npm", "npx", "pip", "docker", "container", "kubernetes", "localhost", "port", "terminal", "command line", "shell", "bash", "framework", "runtime",
+    "compile", "binary", "latency", "throughput", "scalable", "microservice", "oauth", "authentication", "auth", "token", "tokens", "llm", "embedding",
+    "embeddings", "vector", "inference", "saas", "crud", "async", "cron", "daemon", "pipeline", "regex", "ssh", "ssl", "dns", "open source", "open-source",
+    "stack", "full-stack", "sql", "query", "queries", "markdown", "plugin", "extension", "middleware", "rate limit", "realtime", "real-time", "upstream", "fork"],
+  "hype": ["seamless", "seamlessly", "powerful", "robust", "leverage", "revolutionary", "effortless", "effortlessly", "cutting-edge", "next-gen",
+    "supercharge", "game-changing", "game-changer", "blazing", "unleash", "elevate", "empower", "world-class", "best-in-class", "magic", "magical"]
+}

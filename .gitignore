@@ -1,0 +1,33 @@
+node_modules/
+tests/fixture/flex.js
+tests/fixture/flex.css
+tests/fixture/*.mp4
+tests/fixture/*.png
+tests/fixture/assets/
+*-workspace/
+
+# Presentation deck and its assets (not part of the skill)
+/frontend-slides/
+*.pptx
+*.ppt
+*.key
+
+# Videos and the sources used to render them
+*.mp4
+*.mov
+*.m4v
+*.webm
+*.mkv
+*.avi
+/cooling-point-video/
+/flex-demo.html
+/record.js
+
+# Local clones and generated output
+/ffmpeg/
+flex-output/
+
+# Secrets and OS files
+.env
+.env.*
+.DS_Store

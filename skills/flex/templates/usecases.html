@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{PRODUCT}} — use cases</title>
+<link rel="stylesheet" href="flex.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="brand.css">
+<!-- recordings: one per story; add timeline.js <script> tags here -->
+</head>
+<body>
+<!-- Use cases: framing → 2–3 stories (who → before → with product [real footage] → after) → end card. 30–60s. See directions/usecases.md -->
+<main id="flex" data-direction="usecases" data-fps="30" data-bpm="104" data-mood="playful" data-hit="42">
+
+  <section class="scene" data-start="0" data-end="3" data-transition="cut">
+    <h1 class="t-title say fx-zoom" style="--dur:3;--zoom-from:1.05;--zoom-to:1" data-claim="framing">{{FRAMING}}</h1>
+  </section>
+
+  <!-- Story 1 (~13s). Repeat this block per story; change --accent per story for a clear change of chapter. -->
+  <section class="scene" data-start="3" data-end="5.5" data-transition="slide" data-xfade=".45">
+    <i class="ic ic-xl fx-pop" data-ic="{{PERSONA_ICON_1}}" style="--at:.1"></i>
+    <h2 class="t-title say fx-rise" style="--at:.3" data-claim="framing">Imagine {{PERSONA_1}}.</h2>
+  </section>
+  <section class="scene" data-start="5.5" data-end="8.5" data-transition="fade">
+    <p class="kicker fx-fade" style="--at:.1" data-claim="framing">Before</p>
+    <h2 class="t-big say fx-rise" style="--at:.2" data-claim="framing">{{BEFORE_1}}</h2>
+  </section>
+  <section class="scene" data-start="8.5" data-end="14" data-transition="rise" data-xfade=".5">
+    <p class="t-body say fx-rise" style="--at:.1" data-claim="{{CLAIM}}">{{WITH_PRODUCT_LABEL_1}}</p>
+    <div class="fx-demo fx-tilt" data-rec="{{REC_1}}" data-chrome="browser" style="--at:.2;width:74%"></div>
+  </section>
+  <section class="scene" data-start="14" data-end="16" data-transition="fade">
+    <p class="kicker fx-fade" style="--at:.05" data-claim="framing">After</p>
+    <h2 class="t-big say fx-rise" style="--at:.15" data-claim="{{CLAIM}}">{{AFTER_1}}</h2>
+  </section>
+
+  <!-- Story 2, Story 3 … (copy the four scenes above, shift the times) -->
+
+  <section class="scene" data-start="42" data-end="46" data-transition="fade" data-xfade=".5">
+    <img class="logo fx-pop" src="{{LOGO}}" alt="" style="--at:.05">
+    <h2 class="t-title say fx-rise" style="--at:.2" data-claim="framing">{{PRODUCT}}</h2>
+    <p class="t-body say fx-rise" style="--at:.5" data-claim="{{CLAIM}}">{{WHERE_TO_GET_IT}}</p>
+  </section>
+
+</main>
+<script src="flex.js"></script>
+</body>
+</html>

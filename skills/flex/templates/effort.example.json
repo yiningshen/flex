@@ -1,0 +1,8 @@
+{
+  "device":   { "text": "A Mac, Windows or Linux computer", "source": "README.md:20 'Requirements'" },
+  "accounts": { "text": "A free GitHub account", "source": "install run step 1 (git clone over https needs no account — check)" },
+  "cost":     { "text": "Free. The AI part costs about $1 a month — check current price", "source": "openai.com/pricing, read 2026-10-26" },
+  "time":     { "text": "About 15 minutes", "source": "assets/rec/install/log.json total 11m40s, rounded up" },
+  "upkeep":   { "text": "Update once a month with one command", "source": "docs/updating.md:3" },
+  "unknown":  ["Is the free tier enough for a small shop? — ask the maker"]
+}
